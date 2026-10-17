@@ -50,6 +50,7 @@ public class ProductoController {
     }
 
     private void configurarTabla() {
+        tablaProductos.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         colId.setCellValueFactory(new PropertyValueFactory<>("idProducto"));
         colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
