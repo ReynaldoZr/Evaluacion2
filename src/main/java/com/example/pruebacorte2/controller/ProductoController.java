@@ -46,11 +46,13 @@ public class ProductoController {
         configurarTabla();
         configurarCategorias();
         configurarSeleccion();
+        txtBuscar.setOnAction(event -> buscarProductos());
         buscarEnBaseDeDatos(false);
     }
 
     private void configurarTabla() {
         tablaProductos.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        tablaProductos.setPlaceholder(new Label("No hay productos para mostrar"));
         colId.setCellValueFactory(new PropertyValueFactory<>("idProducto"));
         colCodigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         colNombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
