@@ -8,9 +8,14 @@ CREATE TABLE producto (
     precio NUMERIC(10,2) NOT NULL,
     stock INTEGER NOT NULL,
 
-    CHECK (codigo = UPPER(TRIM(codigo)) AND LENGTH(codigo) BETWEEN 1 AND 10),
-    CHECK (LENGTH(TRIM(nombre)) BETWEEN 3 AND 80),
-    CHECK (categoria IN ('Papelería', 'Tecnología', 'Accesorios')),
-    CHECK (precio > 0 AND precio <= 99999999.99),
-    CHECK (stock >= 0)
+    CONSTRAINT chk_producto_codigo
+        CHECK (codigo = UPPER(TRIM(codigo)) AND LENGTH(codigo) BETWEEN 1 AND 10),
+    CONSTRAINT chk_producto_nombre
+        CHECK (LENGTH(TRIM(nombre)) BETWEEN 3 AND 80),
+    CONSTRAINT chk_producto_categoria
+        CHECK (categoria IN ('Papelería', 'Tecnología', 'Accesorios')),
+    CONSTRAINT chk_producto_precio
+        CHECK (precio > 0 AND precio <= 99999999.99),
+    CONSTRAINT chk_producto_stock
+        CHECK (stock >= 0)
 );
