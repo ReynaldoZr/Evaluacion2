@@ -254,7 +254,7 @@ public class ProductoController {
             throw new IllegalArgumentException(
                     "Seleccione una categoría válida.");
         }
-        if (!precioTexto.matches("\\d+(\\.\\d{1,2})?")) {
+        if (!precioTexto.matches("-?\\d+(\\.\\d{1,2})?")) {
             throw new IllegalArgumentException(
                     "El precio debe ser numérico y tener máximo 2 decimales.");
         }

@@ -39,7 +39,7 @@ Prueba exacta indicada en la guía, pendiente de ejecución final:
 | V2 | Nombre con espacios, `AB` y 81 caracteres | Implementado |
 | V3 | Categoría sin seleccionar | Implementado |
 | V4 | Precio `abc` | Implementado |
-| V5 | Precio `0` y `-1` | Implementado; mejorar mensaje de negativo |
+| V5 | Precio `0` y `-1` | Implementado |
 | V6 | Precio `12.345` y `100000000.00` | Implementado |
 | V7 | Stock `abc` y `2.5` | Implementado |
 | V8 | Stock `-1`, `2147483648` y `0` | Implementado |
