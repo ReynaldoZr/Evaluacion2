@@ -11,10 +11,10 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1100, 700);
+        Scene scene = new Scene(fxmlLoader.load(), 1180, 720);
         stage.setTitle("Papelería Campus - Catálogo de productos");
-        stage.setMinWidth(980);
-        stage.setMinHeight(650);
+        stage.setMinWidth(1050);
+        stage.setMinHeight(680);
         stage.setScene(scene);
         stage.show();
     }
