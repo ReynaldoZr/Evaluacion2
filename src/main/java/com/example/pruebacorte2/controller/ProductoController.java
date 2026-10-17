@@ -139,13 +139,18 @@ public class ProductoController {
             }
 
             int filas = productoDAO.guardar(producto);
-            if (filas == 1) {
-                limpiarFormulario();
-                buscarEnBaseDeDatos(false);
-                mostrarAlerta(Alert.AlertType.INFORMATION, "Producto guardado",
-                        "Operación completada",
-                        "El producto se guardó correctamente.");
+            if (filas != 1) {
+                mostrarAlerta(Alert.AlertType.WARNING, "Producto no guardado",
+                        "No se agregó ninguna fila",
+                        "No fue posible guardar el producto.");
+                return;
             }
+
+            limpiarFormulario();
+            buscarEnBaseDeDatos(false);
+            mostrarAlerta(Alert.AlertType.INFORMATION, "Producto guardado",
+                    "Operación completada",
+                    "El producto se guardó correctamente.");
         } catch (IllegalArgumentException ex) {
             mostrarValidacion(ex.getMessage());
         } catch (SQLException ex) {
