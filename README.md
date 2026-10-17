@@ -34,11 +34,9 @@ También se puede crear escribiendo `CREATE DATABASE papeleria_campus;` en pgAdm
 La contraseña no se guarda en el proyecto. En IntelliJ IDEA se deben agregar
 estas variables en **Run > Edit Configurations > Environment variables**:
 
-```text
-DB_URL=jdbc:postgresql://localhost:5432/papeleria_campus
-DB_USER=postgres
-DB_PASSWORD=SU_CONTRASEÑA
-```
+- `DB_URL=jdbc:postgresql://localhost:5432/papeleria_campus`
+- `DB_USER=postgres`
+- `DB_PASSWORD=SU_CONTRASEÑA`
 
 El archivo `config.example.env` contiene el mismo ejemplo sin una contraseña real.
 
@@ -49,11 +47,7 @@ El archivo `config.example.env` contiene el mismo ejemplo sin una contraseña re
 3. Configurar las variables de conexión.
 4. Ejecutar la clase `Launcher`.
 
-También se puede ejecutar desde una terminal con:
-
-```text
-mvnw.cmd javafx:run
-```
+También se puede ejecutar desde una terminal con `mvnw.cmd javafx:run`.
 
 ## Funcionamiento
 
